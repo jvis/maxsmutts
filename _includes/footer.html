@@ -9,28 +9,18 @@
                         <br>{{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}</p>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
+                    <h3>Follow Max's Mutts</h3>
                     <ul class="list-inline">
-                        {% if site.facebook_username %}
+                        {% if site.instagram_username %}
                         <li>
-                            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.twitter_username %}
-                        <li>
-                            <a href="https://twitter.com/{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.github_username %}
-                        <li>
-                            <a href="https://github.com/{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            <a title="Follow us on Instagram" href="https://www.facebook.com/{{ site.instagram_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram "></i></a>
                         </li>
                         {% endif %}
                     </ul>
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>About {{ site.title }}</h3>
-                    <p><a href="http://startbootstrap.com">Start Bootstrap</a> is an open source library of Bootstrap themes and templates.</p>
+                    <p>Max's Mutts is a small dog walking business run by dog lovers, for dog lovers.</p>
                 </div>
             </div>
         </div>
@@ -39,7 +29,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Your Website {{ site.time | date: "%Y" }}
+                    Copyright &copy; Max's Mutts {{ site.time | date: "%Y" }}
+                    
+                    <br />
+                    <small>Site developed by JV Internet Solutions</small>
                 </div>
             </div>
         </div>

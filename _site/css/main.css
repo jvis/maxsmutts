@@ -143,6 +143,130 @@ pre {
     fill: #828282; }
 
 /**
+ * pricing table
+ **/
+.pricing-container {
+  position: relative;
+  display: block;
+  height: 200px;
+  text-align: center; }
+
+.pricing {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  opacity: 1;
+  transition: opacity .2s ease; }
+
+.price-option {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  display: inline-block;
+  width: 15em;
+  vertical-align: middle;
+  margin-right: 0.3125em;
+  font-size: 16px;
+  opacity: 1;
+  transition: opacity .2s ease;
+  border-radius: 6px; }
+
+.price-option:last-child {
+  margin-right: 0; }
+
+.pricing:hover .price-option {
+  opacity: 0.6; }
+
+.pricing:hover .price-option:hover {
+  opacity: 1; }
+
+.price-option-detail {
+  padding: 2em 0;
+  background: white;
+  text-align: center; }
+
+.price-option-low .price-option-detail {
+  border-radius: .25em 0 0 0; }
+
+.price-option-mid .price-option-detail {
+  padding: 2.3em 0;
+  border-radius: .25em .25em 0 0; }
+
+.price-option-high .price-option-detail {
+  border-radius: 0 .25em 0 0; }
+
+.price-option-cost,
+.price-option-type,
+.price-option-subtype {
+  display: block; }
+
+.price-option-cost {
+  font-size: 1.6em;
+  margin-top: 0.5em;
+  color: #383838; }
+
+.price-option-type {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #909090; }
+
+.price-option-subtype {
+  font-size: 0.7em;
+  color: #909090;
+  margin-top: 1em; }
+
+.price-option-purchase {
+  position: relative;
+  display: block;
+  padding: .6em;
+  font-size: .875em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6); }
+
+.price-disclaimer {
+  font-size: 0.9em;
+  color: white;
+  margin-top: 1em; }
+
+.price-option-low .price-option-purchase {
+  background: #ffff9d;
+  border-radius: 0 0 0 .25em; }
+
+.price-option-mid .price-option-purchase {
+  background: #beeb9f;
+  border-radius: 0 0 .25em .25em; }
+
+.price-option-high .price-option-purchase {
+  background: #ff6138;
+  border-radius: 0 0 .25em 0; }
+
+.price-option-purchase:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-style: solid; }
+
+.price-option-low .price-option-purchase:before {
+  border-color: transparent transparent #ffff9d; }
+
+.price-option-mid .price-option-purchase:before {
+  border-color: transparent transparent #beeb9f; }
+
+.price-option-high .price-option-purchase:before {
+  border-color: transparent transparent #ff6138; }
+
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 150px; } }
+/**
  * Site header
  */
 .site-header {
@@ -159,6 +283,29 @@ pre {
   float: left; }
   .site-title, .site-title:visited {
     color: #424242; }
+
+header .intro-text span {
+  display: block;
+  text-indent: -9999px; }
+header .intro-text .name {
+  background: url("../img/logo-white-large.png") no-repeat center center transparent; }
+header .intro-text .tagline,
+header .intro-text .skills {
+  background: url("../img/tagline.png") no-repeat center center transparent; }
+
+/**
+ * navbar 
+ **/
+.navbar .navbar-brand.with-logo {
+  background: url("../img/logo-small-white.png") no-repeat transparent;
+  text-indent: -9999px;
+  height: 40px;
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 600px) {
+    .navbar .navbar-brand.with-logo {
+      margin-left: 15px; } }
 
 .site-nav {
   float: right;
@@ -309,6 +456,52 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity; }
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1; }
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1; }
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+
+.carousel-fade .carousel-control {
+  z-index: 2; }
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 /**
  * Syntax highlighting styles
  */
