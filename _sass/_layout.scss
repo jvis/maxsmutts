@@ -37,11 +37,18 @@ header .intro-text {
     
     .name {
         background: url("../img/logo-white-large.png") no-repeat center center transparent;
+        background-size: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
     
     .tagline,
     .skills {
         background: url("../img/tagline.png") no-repeat center center transparent;
+        background-size: 100%;
+        max-width: 500px;   
+        margin: 0 auto;
     }
 }
 
@@ -61,6 +68,8 @@ header .intro-text {
         
         @include media-query($on-palm) {
             margin-left: 15px;
+            background-size: 100%;
+            max-width: 70%;
         }
     }
 }

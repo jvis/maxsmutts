@@ -148,27 +148,29 @@ pre {
 .pricing-container {
   position: relative;
   display: block;
-  height: 200px;
   text-align: center; }
 
 .pricing {
   position: relative;
-  display: inline-block;
   font-size: 0;
   opacity: 1;
   transition: opacity .2s ease; }
 
+.pricing .col-md-4 {
+  padding-left: 1px;
+  padding-right: 1px; }
+
 .price-option {
+  padding: 0;
+  margin: 0;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-  display: inline-block;
-  width: 15em;
-  vertical-align: middle;
   margin-right: 0.3125em;
   font-size: 16px;
   opacity: 1;
   transition: opacity .2s ease;
-  border-radius: 6px; }
+  border-radius: 6px;
+  margin-top: 10px; }
 
 .price-option:last-child {
   margin-right: 0; }
@@ -190,6 +192,9 @@ pre {
 .price-option-mid .price-option-detail {
   padding: 2.3em 0;
   border-radius: .25em .25em 0 0; }
+  @media screen and (max-width: 800px) {
+    .price-option-mid .price-option-detail {
+      padding-top: 2em; } }
 
 .price-option-high .price-option-detail {
   border-radius: 0 .25em 0 0; }
@@ -288,10 +293,17 @@ header .intro-text span {
   display: block;
   text-indent: -9999px; }
 header .intro-text .name {
-  background: url("../img/logo-white-large.png") no-repeat center center transparent; }
+  background: url("../img/logo-white-large.png") no-repeat center center transparent;
+  background-size: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 10px; }
 header .intro-text .tagline,
 header .intro-text .skills {
-  background: url("../img/tagline.png") no-repeat center center transparent; }
+  background: url("../img/tagline.png") no-repeat center center transparent;
+  background-size: 100%;
+  max-width: 500px;
+  margin: 0 auto; }
 
 /**
  * navbar 
@@ -305,7 +317,9 @@ header .intro-text .skills {
   margin-bottom: 10px; }
   @media screen and (max-width: 600px) {
     .navbar .navbar-brand.with-logo {
-      margin-left: 15px; } }
+      margin-left: 15px;
+      background-size: 100%;
+      max-width: 70%; } }
 
 .site-nav {
   float: right;

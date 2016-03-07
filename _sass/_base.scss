@@ -209,28 +209,30 @@ pre {
 .pricing-container {
     position: relative;
     display: block;
-    height: 200px;
     text-align: center;
 }
 .pricing {
     position: relative;
-    display: inline-block;
     font-size: 0;
     opacity: 1;
     transition: opacity .2s ease;
 }
+.pricing .col-md-4 {
+    padding-left: 1px;
+    padding-right: 1px;
+}
 
-.price-option {
+.price-option {    
+    padding: 0;
+    margin: 0;
     -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
-    display: inline-block;
-    width: 15em;
-    vertical-align: middle;
     margin-right: 0.3125em;
     font-size: 16px;
     opacity: 1;
     transition: opacity .2s ease;    
     border-radius: 6px;
+    margin-top: 10px; 
 }
 
 .price-option:last-child { margin-right: 0; }
@@ -245,7 +247,14 @@ pre {
 }
 
 .price-option-low .price-option-detail  { border-radius: .25em 0 0 0; }
-.price-option-mid .price-option-detail  { padding: 2.3em 0; border-radius: .25em .25em 0 0; }
+.price-option-mid .price-option-detail  { 
+    padding: 2.3em 0; 
+    border-radius: .25em .25em 0 0; 
+
+    @include media-query($on-laptop) {
+        padding-top: 2em;        
+    }
+}
 .price-option-high .price-option-detail { border-radius: 0 .25em 0 0; }
 
 .price-option-cost,

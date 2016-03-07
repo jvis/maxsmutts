@@ -10,10 +10,8 @@
 
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <!-- Bootswatch Core CSS - Served by Start Bootstrap CDN powered by MaxCDN -->
-    <link rel="stylesheet" href="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/css/freelancer.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/freelancer.css">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
