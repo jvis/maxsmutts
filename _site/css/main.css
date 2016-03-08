@@ -281,7 +281,7 @@ hr.star-primary.bullhorn:after {
 
 .spinner .spinner-group {
   width: 50%;
-  min-width: 160px;
+  min-width: 110px;
   margin: 0 auto;
   position: relative;
   display: table;

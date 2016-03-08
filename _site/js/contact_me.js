@@ -1,7 +1,13 @@
 ;(function ($, window, document, undefined) {
     $(function () {
-
-        $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+        
+        var $form = $('#contact-form');
+        
+        $form.bind('reset', function () {
+            $('.floating-label-form-group-with-value', this).removeClass('floating-label-form-group-with-value');
+        });
+        
+        $form.find(':input').jqBootstrapValidation({
             preventSubmit: true,
             submitError: function ($form, event, errors) {
                 // additional error messages or events
@@ -12,17 +18,17 @@
                 event.preventDefault();
 
                 // get values from FORM
-                var name = $("input#name").val();
-                var email = $("input#email").val();
-                var phone = $("input#phone").val();
-                var message = $("textarea#message").val();
+                var name = $("input#name", $form).val();
+                var email = $("input#email", $form).val();
+                var phone = $("input#phone", $form).val();
+                var message = $("textarea#message", $form).val();
                 var firstName = name; // For Success/Failure Message
                 // Check for white space in name for Success/Fail message
                 if (firstName.indexOf(' ') >= 0) {
                     firstName = name.split(' ').slice(0, -1).join(' ');
                 }
                 $.ajax({
-                    url: "././mail/contact_me.php",
+                    url: $form.attr('action'),
                     type: "POST",
                     data: {
                         name: name,
@@ -31,6 +37,7 @@
                         message: message
                     },
                     cache: false,
+                    dataType: "json",
                     success: function () {
                         // Enable button & show success message
                         $("#btnSubmit").attr("disabled", false);
@@ -43,7 +50,7 @@
                                 .append('</div>');
 
                         //clear all fields
-                        $('#contactForm').trigger("reset");
+                        $form.trigger("reset");
                     },
                     error: function () {
                         // Fail message
@@ -53,13 +60,14 @@
                         $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                         $('#success > .alert-danger').append('</div>');
                         //clear all fields
-                        $('#contactForm').trigger("reset");
+                        $form.trigger("reset");
                     },
-                })
+                    crossDomain: true
+                });
             },
             filter: function () {
                 return $(this).is(":visible");
-            },
+            }
         });
 
         $("a[data-toggle=\"tab\"]").click(function (e) {

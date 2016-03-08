@@ -8,21 +8,21 @@
                 </div>
             </div>
             <div class="row">
+                <h3 class="text-center"><a href="#contact" title="Contact via email"><span class="contact-email-replace">please enable javascript to view</span></a></h3>
+                
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contact-form" action="#" method="POST" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" name="name" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <input type="email" class="form-control" name="email" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -47,6 +47,9 @@
                                 <button type="submit" class="btn btn-success btn-lg">Send</button>
                             </div>
                         </div>
+                        
+                        <input type="hidden" name="_subject" value="Contact form submission: Maxs Mutts" />
+                        <input type="text" name="_gotcha" style="display:none" />
                     </form>
                 </div>
             </div>

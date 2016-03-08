@@ -118,5 +118,15 @@
                 $target.text(price);
             });
         });
+        
+        $('.contact-email-replace').html(function () {
+            var e = "max", a = "@", d = "maxsmutts", c = ".com", h = 'mailto:' + e + a + d + c;
+            
+            $(this).parent('a').attr('href', h);
+            
+            // set formspree action
+            $('#contact-form').attr('action', "//formspree.io/" + e + a + d + c);
+            return e + a + d + c;
+        });
     });
 })(jQuery, window, document);
