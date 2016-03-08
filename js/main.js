@@ -11,7 +11,10 @@
         dogs  = parseInt(dogs || 1);
         walks = parseInt(walks || 1);
         
-        if (walks < 5) {
+        if (walks <= 0) {
+            return 0;
+        }
+        else if (walks < 5) {
             return calculate(dogs, walks, 25, 15);
         }
         else if (walks < 10) {
@@ -21,22 +24,19 @@
             return calculate(dogs, walks, 18, 15);
         }
         else {
-            var p = calculatePrice(dogs, 10), y = walks - 10;
+            var p = 0;
             
-            while (y > 0) {
-                var i = 10;
-
-                while (i > 0) {
-                    if (y % i === 0) {
-                        p += calculatePrice(dogs, y);
-                        y -= i;
-                        break;
-                    }
-
-                    i--;
+            while (walks > 0) {
+                if (walks < 10) {
+                    p += calculatePrice(dogs, walks);
                 }
+                else {
+                    p += calculatePrice(dogs, 10);
+                }
+                
+                walks -= 10;
             }
-
+            
             return p;
         }
     };
