@@ -4,7 +4,7 @@
      */
 
     var calculate = function (dogs, walks, perWalk, perExtraDog) {
-        return (walks * perWalk) + ((dogs - 1) * perExtraDog);
+        return (walks * perWalk) + ((dogs - 1) * walks * perExtraDog);
     };
 
     var calculatePrice = function (dogs, walks) {
@@ -15,13 +15,13 @@
             return 0;
         }
         else if (walks < 5) {
-            return calculate(dogs, walks, 25, 15);
+            return calculate(dogs, walks, 25, 12.50);
         }
         else if (walks < 10) {
-            return calculate(dogs, walks, 20, 15);
+            return calculate(dogs, walks, 20, 10);
         }
-        else if (walks === 10) {
-            return calculate(dogs, walks, 18, 15);
+        else if (walks >= 10) {
+            return calculate(dogs, walks, 18, 9);
         }
         else {
             var p = 0;
