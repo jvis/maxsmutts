@@ -4,10 +4,17 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2>Services</h2>
-                <hr class="star-light">
+                <hr class="star-light paw">
             </div>
         </div>
 
+        <div class="row text-center">
+            <h3>Simple &middot; Flexible &middot; Affordable</h3>
+            
+            <h5>Just pay for what your dog needs</h5>
+            <h5>No lock-in contracts or fixed schedules</h5>
+        </div>
+        
         <div class="row text-center">
             <div class="col-md-1"></div>
             <div class="col-md-10 pricing">
@@ -26,7 +33,7 @@
                         <div class="price-option-detail">
                             <span class="price-option-type">5 dog walks</span>
                             <span class="price-option-cost">$100</span>
-                            <span class="price-option-subtype">+ $10 per additional dog</span>
+                            <span class="price-option-subtype">+ $15 per additional dog</span>
                         </div>
                         <a href="#" class="price-option-purchase">Contact Us</a>
                     </div>
@@ -36,7 +43,7 @@
                         <div class="price-option-detail">
                             <span class="price-option-type">10 dog walks</span>
                             <span class="price-option-cost">$180</span>
-                            <span class="price-option-subtype">+ $8 per additional dog</span>
+                            <span class="price-option-subtype">+ $15 per additional dog</span>
                         </div>
                         <a href="#" class="price-option-purchase">Contact Us</a>
                     </div>
@@ -44,8 +51,63 @@
             </div>
             <div class="col-md-1"></div>
         </div>
-       <div class="row text-center">
-            <div class="col-md-12 text-center price-disclaimer">All dog walks take approximately 30-45 minutes.</div>
-       </div>
+        
+        <div class="row text-center">
+            <div class="col-md-12 text-center price-disclaimer">
+                <p>All dog walks take approximately 30-45 minutes.</p>
+            </div>
+        </div>
+        
+        <hr class="star-light paw">
+                
+        <div class="row text-center">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 calculator" 
+                 data-target=".calculator-price > .amount" 
+                 data-default="25" 
+                 data-dogs="#calculator-dogs" 
+                 data-walks="#calculator-walks">
+                <div class="col-md-6 col-xs-6 col-sm-6 calculator-left">
+                    <div>
+                        <h3><i class="fa fa-paw"></i> How many dogs?</h3>
+                        
+                        <div class="spinner form-group">
+                            <div class="spinner-group">
+                                <input type="text" class="form-control" id="calculator-dogs" value="1" placeholder="# of dogs">
+                                
+                                <div class="input-group-btn-vertical">
+                                    <a class="btn direction" data-direction="up" href="#calculator-dogs"><i class="fa fa-caret-up"></i></a>
+                                    <a class="btn direction" data-direction="down" href="#calculator-dogs"><i class="fa fa-caret-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><i class="fa fa-heart"></i> How many walks?</h3>
+                        
+                        <div class="spinner form-group">
+                            <div class="spinner-group">
+                                <input id="calculator-walks" type="text" class="form-control" value="1" placeholder="# of walks">
+
+                                <div class="input-group-btn-vertical">
+                                    <a class="btn direction" data-direction="up" href="#calculator-walks"><i class="fa fa-caret-up"></i></a>
+                                    <a class="btn direction" data-direction="down" href="#calculator-walks"><i class="fa fa-caret-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 calculator-right">
+                    <div class="row">
+                        <h3><i class="fa fa-money"></i> You'll pay</h3>
+                        <div class="calculator-price">
+                            <sup class="prefix">$</sup><span class="amount">25</span>
+                        </div>
+                        <div class="col-md-offset-2 col-md-8 calculator-disclaimer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
     </div>
 </section>

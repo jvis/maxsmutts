@@ -291,10 +291,10 @@ pre {
     text-decoration: none;
     color: rgba(0,0,0,0.6);
 }
-.price-disclaimer {
+.price-disclaimer p {
     font-size: 0.9em;
     color: white;
-    margin-top: 1em;
+    margin-top: 15px;
 }
 
 .price-option-low .price-option-purchase  { background: $scheme-yellow; border-radius: 0 0 0 .25em; }

@@ -18,7 +18,7 @@
 
     <link rel="canonical" href="http://maxsmutts.com/design/2016/02/05/circus.html">
 
-    <link rel="alternate" type="application/rss+xml" title="Max's Mutts" href="http://maxsmutts.com /feed.xml ">
+    <link rel="alternate" type="application/rss+xml" title="Max's Mutts" href="http://maxsmutts.com /feed.xml">
 
     <!-- Custom Fonts -->
     <link href="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -139,10 +139,17 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2>Services</h2>
-                <hr class="star-light">
+                <hr class="star-light paw">
             </div>
         </div>
 
+        <div class="row text-center">
+            <h3>Simple &middot; Flexible &middot; Affordable</h3>
+            
+            <h5>Just pay for what your dog needs</h5>
+            <h5>No lock-in contracts or fixed schedules</h5>
+        </div>
+        
         <div class="row text-center">
             <div class="col-md-1"></div>
             <div class="col-md-10 pricing">
@@ -161,7 +168,7 @@
                         <div class="price-option-detail">
                             <span class="price-option-type">5 dog walks</span>
                             <span class="price-option-cost">$100</span>
-                            <span class="price-option-subtype">+ $10 per additional dog</span>
+                            <span class="price-option-subtype">+ $15 per additional dog</span>
                         </div>
                         <a href="#" class="price-option-purchase">Contact Us</a>
                     </div>
@@ -171,7 +178,7 @@
                         <div class="price-option-detail">
                             <span class="price-option-type">10 dog walks</span>
                             <span class="price-option-cost">$180</span>
-                            <span class="price-option-subtype">+ $8 per additional dog</span>
+                            <span class="price-option-subtype">+ $15 per additional dog</span>
                         </div>
                         <a href="#" class="price-option-purchase">Contact Us</a>
                     </div>
@@ -179,9 +186,64 @@
             </div>
             <div class="col-md-1"></div>
         </div>
-       <div class="row text-center">
-            <div class="col-md-12 text-center price-disclaimer">All dog walks take approximately 30-45 minutes.</div>
-       </div>
+        
+        <div class="row text-center">
+            <div class="col-md-12 text-center price-disclaimer">
+                <p>All dog walks take approximately 30-45 minutes.</p>
+            </div>
+        </div>
+        
+        <hr class="star-light paw">
+                
+        <div class="row text-center">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 calculator" 
+                 data-target=".calculator-price > .amount" 
+                 data-default="25" 
+                 data-dogs="#calculator-dogs" 
+                 data-walks="#calculator-walks">
+                <div class="col-md-6 col-xs-6 col-sm-6 calculator-left">
+                    <div>
+                        <h3><i class="fa fa-paw"></i> How many dogs?</h3>
+                        
+                        <div class="spinner form-group">
+                            <div class="spinner-group">
+                                <input type="text" class="form-control" id="calculator-dogs" value="1" placeholder="# of dogs">
+                                
+                                <div class="input-group-btn-vertical">
+                                    <a class="btn direction" data-direction="up" href="#calculator-dogs"><i class="fa fa-caret-up"></i></a>
+                                    <a class="btn direction" data-direction="down" href="#calculator-dogs"><i class="fa fa-caret-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><i class="fa fa-heart"></i> How many walks?</h3>
+                        
+                        <div class="spinner form-group">
+                            <div class="spinner-group">
+                                <input id="calculator-walks" type="text" class="form-control" value="1" placeholder="# of walks">
+
+                                <div class="input-group-btn-vertical">
+                                    <a class="btn direction" data-direction="up" href="#calculator-walks"><i class="fa fa-caret-up"></i></a>
+                                    <a class="btn direction" data-direction="down" href="#calculator-walks"><i class="fa fa-caret-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 calculator-right">
+                    <div class="row">
+                        <h3><i class="fa fa-money"></i> You'll pay</h3>
+                        <div class="calculator-price">
+                            <sup class="prefix">$</sup><span class="amount">25</span>
+                        </div>
+                        <div class="col-md-offset-2 col-md-8 calculator-disclaimer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
     </div>
 </section>
 
@@ -191,7 +253,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Contact Me</h2>
-                    <hr class="star-primary">
+                    <hr class="star-primary bullhorn">
                 </div>
             </div>
             <div class="row">
@@ -289,6 +351,59 @@
 
 
     
+<div class="portfolio-modal modal fade" id="" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Welcome to Jekyll!</h2>
+                        <hr class="star-primary">
+                        <img src="/" class="img-responsive img-centered" alt="">
+                        You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help
+
+                        <ul class="list-inline item-details">
+                            <li>Category:
+                                <strong>
+                                    </strong>
+                            </li>
+                            <li>Date:
+                                <strong>March 2016
+                                    </strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="portfolio-modal modal fade" id="modalCabin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -519,18 +634,18 @@ In the Jekyll version of Freelancer, each portfolio item is a separate post that
 
 
     <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/js/classie.js"></script>
-<script src="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/js/cbpAnimatedHeader.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/classie.js"></script>
+<script src="/js/cbpAnimatedHeader.js"></script>
 <!-- Contact Form JavaScript -->
-<script src="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/js/jqBootstrapValidation.js"></script>
-<script src="http://sbootstrap-freelancer.startbootstrapc.netdna-cdn.com/js/contact_me.js"></script>
+<script src="/js/jqBootstrapValidation.js"></script>
+<script src="/js/contact_me.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-freelancer/1.0.5/js/freelancer.min.js"></script>
+<script src="/js/main.js"></script>
 
 
   </body>
