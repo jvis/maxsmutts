@@ -1,1 +1,0 @@
-# [Max's Mutts](http://maxsmutts.com/) - Dog walking services for the Sydney CBD
